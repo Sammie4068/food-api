@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+html {
+  font-family: "Nunito";
+  font-size: 12px;
+  font-weight: 600;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0 0 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(26, 26, 27);
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  height: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand {
+  text-align: center;
+  font-size: 4rem;
+  color: whitesmoke;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: rgb(223, 223, 223);
+  border-radius: 10px;
+}
+
+form input {
+  width: 90%;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+form i {
+  width: 9%;
+  font-size: 2.51rem;
+  margin: -9px;
+  color: rgb(75, 75, 75);
+}
+
+.search-result {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.item {
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(37, 37, 37);
+  padding: 15px;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: 400px;
+  border-radius: 4px;
+}
+
+.item .flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item .title {
+  color: whitesmoke;
+  margin: 20px 10px 0 0;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.item h2{
+  margin-top: 20px;
+  color: orange
+}
+
+.view-button {
+  text-decoration: none;
+  text-align: center;
+  width: 120px;
+  padding: 8px 0;
+  background-color: #404041;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.container.initial .brand {
+  font-size: 7rem;
+}
+
+.container.initial form {
+  max-width: 800px;
+}
+
+.container.initial form input {
+  padding: 20px;
+  font-size: 3rem;
+}
+
+.food_btn {
+  width: 20rem;
+  background-color: orangered;
+  border: none;
+  border-radius: 5px;
+  height: 4rem;
+  color: #eee;
+  font-family: "Nunito";
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.food_btn:hover {
+  background-color: #574f4f;
+  color: rgb(245, 235, 232);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  font-family: "Nunito";
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  height: 100vh;
+  overflow-y:scroll;
+}
+
+.close-modal{
+  color: red;
+  border-radius: 300px;
+  width: 8%;
+
+}
+
+.close-modal:hover {
+  color: white;
+  background-color: red;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 5;
+}
+
+.list{
+  font-size: 2.0rem;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+.timers{
+  float: right;
+}
+
+.timer{
+  font-size: 100px;
+  /* border: 1px red solid; */
+  margin: 10%;
+  color: red
+}
+
+.error{
+  margin-left: 10%;
+  font-size: 20px;
+  color: rgb(193, 84, 84);
+  /* transition: background-color 3.5s ease; */
+}
+
+.estimated-Time{
+  color: greenyellow
+}
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+  .container.initial .brand {
+    font-size: 5rem;
+  }
+
+  .container.initial form input {
+    padding: 15px;
+    font-size: 2rem;
+  }
+
+  form i {
+    width: 9%;
+    margin: -10px;
+  }
+}
